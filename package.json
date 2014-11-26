@@ -1,0 +1,28 @@
+{
+  "name": "mdmjs",
+  "version": "1.0.0",
+  "description": "A js library to easily create a html5 theme for Mint Display Manager (MDM)",
+  "main": "mdm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mdm",
+    "login",
+    "html5",
+    "themes",
+    "linux"
+  ],
+  "devDependencies": {
+    "del": "^0.1.3",
+    "gulp": "^3.8.8",
+    "gulp-if": "^1.2.5",
+    "gulp-load-plugins": "^0.6.0",
+    "gulp-replace": "^0.4.0",
+    "gulp-size": "^1.1.0",
+    "gulp-useref": "^1.0.1",
+    "yargs": "^1.3.1"
+  },
+  "author": "kamhix",
+  "license": "MIT"
+}

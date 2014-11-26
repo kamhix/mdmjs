@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- build:css styles/style.css -->
+      <link href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="../../../bower_components/animate.css/animate.min.css" rel="stylesheet" type="text/css">
+      <link href="../../../bower_components/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+      <link href="styles/main.css" rel="stylesheet" type="text/css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/script.js -->
+		<script src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="../../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../../mdm.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div class="bkg">
+    </div>
+    <div class="page">
+      <div class="toolbox">
+        <a href="#" data-toggle="modal" data-target="#settings"><i class="fa fa-power-off"></i></a>
+      </div>
+      <div class="modal animated bounceInDown" id="settings" tabindex="-1" role="dialog"
+        aria-labelledby="settingsLbl" aria-hidden="true">
+        <div class="modal-dialog">
+	        <div class="modal-content">
+		        <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">
+				        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+			        </button>
+			        <h1 class="h2 modal-title" id="settingsLbl">Are sure you want quit ?</h1>
+		        </div>
+
+		        <div class="modal-body text-center">
+              <span id="shutdown-btn" class="btn btn-default">
+                <i class="fa fa-power-off"></i>
+                Shutdown
+              </span>
+              <span id="suspend-btn" class="btn btn-default">
+                <i class="fa fa-download"></i>
+                Suspend
+              </span>
+              <span id="restart-btn" class="btn btn-default">
+                <i class="fa fa-refresh"></i>
+                Restart
+              </span>
+              <span id="quit-btn" class="btn btn-default hide">
+                <i class="fa fa-shutdown"></i>
+                Quit
+              </span>
+              <span id="xdmcp-btn" class="btn btn-default hide">
+                <i class="fa fa-shutdown"></i>
+                Xdmcp
+              </span>
+            </div>
+
+		        <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		        </div>
+	        </div>
+        </div>
+      </div>
+
+      <div id="clock-box">
+
+      </div>
+
+      <div id="languages" class="animated bounceInRight">
+
+      </div>
+
+      <div id="users" class="">
+      </div>
+      <div id="sessions" class="animated bounceInLeft">
+
+      </div>
+
+      <div class="login-box well-sm animated bounceIn">
+        <div id="welcome-box" class="alert alert-info text-center">
+        </div>
+        <div id="msg-box" class="alert alert-info hide">
+
+        </div>
+        <div id="error-box" class="alert alert-danger">
+          This is an error!
+        </div>
+        <div id="timed-box" class="alert alert-warning">
+          This is an timed!
+        </div>
+        <form class="form-inline" role="form">
+          <div class="text-center">
+            <button type="button" data-toggle="button" class="btn btn-default btn-sm btn-round">
+              <img id="curSes" src="">
+            </button>
+            <div id="curUser">
+              <img src="" class="face">
+              <span class="text-center"></span>
+            </div>
+            <button type="button" data-toggle="button" class="btn btn-default btn-sm btn-round">
+              <img id="curLan" src="">
+            </button>
+          </div>
+          <div class="form-group text-center">
+            <label for="user-input"  class="text-left" id="user-label">Password</label>
+            <input id="user-input" class="form-control input-sm">
+            <span id="ok-button" class="btn btn-sm btn-default" onclick="send_login();">OK</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
