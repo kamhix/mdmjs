@@ -3,14 +3,11 @@ mdmjs
 
 A js tool to easily create an html5 theme for Mint Display Manager (MDM) 
 
-## Installation
+## How to use it
 
-### Clone the repo
+Clone the repo
 
-    $ git clone git@bitbucket.org:tekxl/getpikiz.git
-    $ cd getpikiz
+$ git clone git@github.com:kamhix/mdmjs.git
 
-### Install dependencies
+Check the example in the themes directory
 
-    $ bower install
-    $ npm install
