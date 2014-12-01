@@ -37,7 +37,7 @@ window.addEventListener('load', function () {
     }
   };
 
-  var showCurUser = function (user) {
+  var showCurUserCb = function (user) {
     var curUserDivImg = document.querySelector('#curUser .face');
     var curUserDivSpan = document.querySelector('#curUser span');
 
@@ -70,7 +70,7 @@ window.addEventListener('load', function () {
     showUsers: showUsers,
     showSessions: showSessions,
     showLanguages: showLanguages,
-    showCurUser: showCurUser
+    showCurUserCb: showCurUserCb
   };
 
   var mdm = new MDM('../../common', options);
