@@ -1,28 +1,19 @@
+function extend (a, b) {
+  for (var key in b) {
+    if (b.hasOwnProperty(key)) {
+      a[key] = b[key];
+    }
+  }
+  return a;
+}
+
 function MDM (commonDir, options) {
 
   var self = this;
 
   this.commonDir = commonDir;
 
-  this.clockBox = options.clockBox;
-  this.errorBox = options.errorBox;
-  this.msgBox = options.msgBox;
-  this.okButton = options.okButton;
-  this.timedBox = options.timedBox;
-  this.userInput = options.userInput;
-  this.userLabel = options.userLabel;
-  this.welcomeMsgBox = options.welcomeMsgBox;
-  this.shutdownBox = options.shutdownBox;
-  this.suspendBox = options.suspendBox;
-  this.restartBox = options.restartBox;
-  this.quitBox = options.quitBox;
-  this.xdmcpBox = options.xdmcpBox;
-  this.curSessionPicture = options.curSessionPicture;
-  this.curLanguageFlag = options.curLanguageFlag;
-  this.showUsers = options.showUsers;
-  this.showSessions = options.showSessions;
-  this.showLanguages = options.showLanguages;
-  this.showCurUserCb = options.showCurUser;
+  extend(this, options);
 
   this.users = [];
   this.sessions = [];
